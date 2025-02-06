@@ -19,7 +19,7 @@ body {
 header {
     background: white;
     padding: 15px 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .header-content {
@@ -101,92 +101,6 @@ header {
     text-decoration: none;
 }
 
-/* flash-sale-container
-.flash-sale-container {
-    position: relative;
-    overflow: hidden;
-}
-
-Wrapper chứa danh sách sản phẩm
-.flash-sale-wrapper {
-    display: flex;
-    overflow: hidden;
-    width: 100%;
-}
-
-Product Grid
-.product-grid {
-    display: flex;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 15px;
-    margin-bottom: 30px;
-    transition: transform 0.5s ease-in-out;
-}
-
-.product-grid-may-like {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 15px;
-    margin-bottom: 30px;
-    transition: transform 0.5s ease-in-out;
-}
-
-.product-card {
-    width: 182px;
-    background: white;
-    border-radius: 8px;
-    padding: 15px 7px 30px 7px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    flex: 0 0 auto;
-}
-
-.product-image {
-    width: 100%;
-    height: 150px;
-    background: #f0f0f0;
-    border-radius: 4px;
-    margin-bottom: 10px;
-}
-
-.product-title {
-    font-size: 14px;
-    margin-bottom: 5px;
-}
-
-.product-price {
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 5px;
-}
-
-.product-rating {
-    color: #ffc107;
-    font-size: 12px;
-}
-
-Nút điều hướng
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 24px;
-    font-weight: bold;
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    user-select: none;
-    z-index: 10;
-}
-
-.prev { left: 5px; }
-.next { right: 5px; }
-
-.prev:hover, .next:hover {
-    background: rgba(0, 0, 0, 0.8);
-} */
-
 /* flash-sale-container */
 .flash-sale-container {
     position: relative;
@@ -209,12 +123,21 @@ Nút điều hướng
     transition: transform 0.5s ease-in-out;
 }
 
+.product-grid-may-like {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+    transition: transform 0.5s ease-in-out;
+}
+
+
 .product-card {
     width: 182px;
     background: white;
     border-radius: 8px;
     padding: 15px 7px 30px 7px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     flex: 0 0 auto;
 }
 
@@ -260,8 +183,13 @@ Nút điều hướng
     transition: background 0.3s;
 }
 
-.prev { left: 5px; }
-.next { right: 5px; }
+.prev {
+    left: 5px;
+}
+
+.next {
+    right: 5px;
+}
 
 .prev:hover, .next:hover {
     background: rgba(0, 0, 0, 0.8);
@@ -281,7 +209,7 @@ Nút điều hướng
     border-radius: 8px;
     padding: 7px 7px 19px 7px;
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .brand-name {
@@ -289,13 +217,14 @@ Nút điều hướng
     font-weight: bold;
 }
 
-.brand-image{
+.brand-image {
     width: 100%;
     height: 150px;
-    background: #f0f0f0; 
+    background: #f0f0f0;
     border-radius: 4px;
     margin-bottom: 19px;
 }
+
 /* Category Grid */
 .category-grid {
     display: grid;
@@ -309,7 +238,7 @@ Nút điều hướng
     border-radius: 8px;
     padding: 30px;
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .category-icon {
@@ -326,11 +255,12 @@ Nút điều hướng
     .search-bar {
         display: none;
     }
-    
+
     .product-grid {
         grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
     }
 }
+
 /* Promotions Grid */
 .promotions-grid {
     display: grid;
@@ -458,11 +388,13 @@ Nút điều hướng
     .footer-content {
         grid-template-columns: 1fr 1fr;
     }
+
     .footer-top {
         flex-direction: column;
         text-align: center;
         gap: 15px;
     }
+
     .footer-bottom {
         flex-direction: column;
         text-align: center;
@@ -475,3 +407,5 @@ Nút điều hướng
         grid-template-columns: 1fr;
     }
 }
+
+/* ===============================================================CSS product===============================================================================================================================================================================  */

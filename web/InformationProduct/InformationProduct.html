@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emmable - Product Detail</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/web/css/InformationProduct.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">Shop.Co</div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search in Emmable">
+            </div>
+            <div class="header-actions">
+                <span>🛒</span>
+                <button class="login-btn">Login</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="breadcrumb">
+            Home / Film & Music / Guitar & Bass / Pick Guitar & Bass / 
+            <span style="color: #000;">Awesome Brand - Cool product</span>
+        </div>
+
+        <div class="product-grid">
+            <div class="product-images">
+                <div class="main-image"></div>
+                <div class="thumbnail-grid">
+                    <div class="thumbnail"></div>
+                    <div class="thumbnail"></div>
+                    <div class="thumbnail"></div>
+                    <div class="thumbnail"></div>
+                    <div class="thumbnail"></div>
+                </div>
+            </div>
+
+            <div class="product-info">
+                <h1 class="product-title">Awesome Brand - Cool product with nice color - White</h1>
+                
+                <div class="product-meta">
+                    <div class="rating">
+                        ★ 4.8
+                    </div>
+                    <div>1.2k reviews</div>
+                    <div>Sold 700+</div>
+                </div>
+
+                <div class="price">$85.00</div>
+
+                <div class="color-section">
+                    <div class="color-title"><b>Color</b>: Black</div>
+                    <div class="color-options">
+                        <button class="color-option active">Black</button>
+                        <button class="color-option">Yellow</button>
+                        <button class="color-option">Purple</button>
+                        <button class="color-option">Turquoise</button>
+                    </div>
+                </div>
+
+                <div class="product-details">
+                    <h2>Details</h2>
+                
+                    <div class="detail-item"><span class="label">Condition:</span> <span class="value">New</span></div>
+                    <div class="detail-item"><span class="label">Unit Weight:</span> <span class="value">10 g</span></div>
+                    <div class="detail-item"><span class="label">Category:</span> <span class="value">Pick Guitar & Bass</span></div>
+                    <div class="detail-item"><span class="label">Storefront:</span> <span class="value">Guitar: Pick</span></div>
+                
+                    <p>The Rombo Origami Pick Set (4 guitar picks) consists of:</p>
+                    <p><strong>4 x Rombo Origami | 0.75 mm</strong></p>
+                    <p>Flexible but still rigid enough for note control. Right amount of flexibility for a snappy fluid attack that’s bright and crisp. The concave surface on the hold area ensures ergonomic and comfortable hold.</p>
+                </div>                
+            </div>
+            <div class="Product-Order-Box">
+                <div class="quantity-section">
+                    <label>Quantity</label>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn decrease">−</button>
+                        <input type="number" class="quantity-input" value="1" min="1">
+                        <button class="quantity-btn increase">+</button>
+                    </div>
+                </div>
+                
+
+                <div class="button-group">
+                    <button class="add-to-cart">Add to Cart</button>
+                    
+                    <button class="buy-now">Buy Now</button>
+                </div>
+
+                <div class="actions">
+                    <div class="wishlist">♡ Wishlist</div>
+                    |
+                    <div class="share">↗ Share</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="seller-info">
+            <div class="seller-avatar"></div>
+            <div class="seller-details">
+                <div style="font-weight: 600;">Rombo</div>
+                <div style="font-size: 14px; color: #666;">Jakarta Barat</div>
+            </div>
+        </div>
+
+        <div class="reviews-section">
+            <h2>Customer Reviews</h2>
+            <div class="review-stats">
+                <div>
+                    <div style="font-size: 32px; font-weight: 700;">4.8</div>
+                    <div>of 158 reviews</div>
+                </div>
+                <div class="review-bars">
+                    <!-- Review bars would go here -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="/web/js/script.js"></script>
+    <!-- Đặt JavaScript ở cuối body -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const decreaseBtn = document.querySelector(".decrease");
+            const increaseBtn = document.querySelector(".increase");
+            const quantityInput = document.querySelector(".quantity-input");
+        
+            decreaseBtn.addEventListener("click", function() {
+                let currentValue = parseInt(quantityInput.value);
+                if (currentValue > 1) {
+                    quantityInput.value = currentValue - 1;
+                }
+            });
+        
+            increaseBtn.addEventListener("click", function() {
+                let currentValue = parseInt(quantityInput.value);
+                quantityInput.value = currentValue + 1;
+            });
+        });
+    </script>
+</body>
+</html>

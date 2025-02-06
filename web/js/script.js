@@ -1,20 +1,4 @@
 // Sample data
-// const flashSaleProducts = [
-//     { name: 'Awesome Brand - Cool product', price: '$85.00', rating: 4.5 },
-//     { name: 'Awesome Brand - Cool product', price: '$85.00', rating: 4.5 },
-//     { name: 'Awesome Brand - Cool product', price: '$85.00', rating: 4.5 },
-//     { name: 'Awesome Brand - Cool product', price: '$85.00', rating: 4.5 },
-//     { name: 'Awesome Brand - Cool product', price: '$85.00', rating: 4.5 },
-//     { name: 'Awesome Brand - Cool product', price: '$85.00', rating: 4.5 },
-//     { name: 'Awesome Brand - Cool product', price: '$85.00', rating: 4.5 },
-//     { name: 'Awesome Brand - Cool product', price: '$85.00', rating: 4.5 },
-//     { name: 'Awesome Brand - Cool product', price: '$85.00', rating: 4.5 },
-//     { name: 'Awesome Brand - Cool product', price: '$85.00', rating: 4.5 },
-//     { name: 'Awesome Brand - Cool product', price: '$85.00', rating: 4.5 },
-//     { name: 'Awesome Brand - Cool product', price: '$85.00', rating: 4.5 }
-// ];
-
-
 const flashSaleProducts = [
     { name: 'Awesome Brand - Cool product', price: '$85.00', rating: 4.5 },
     { name: 'Awesome Brand - Cool product', price: '$85.00', rating: 4.5 },
@@ -49,26 +33,26 @@ flashSaleContainer.innerHTML = flashSaleProducts.map(product => `
     </div>
 `).join('');
 
-// ✅ Hàm tính số sản phẩm hiển thị trên màn hình
+// Hàm tính số sản phẩm hiển thị trên màn hình
 function getVisibleItems() {
     return Math.floor(flashSaleWrapper.offsetWidth / SLIDE_WIDTH);
 }
 
-// ✅ Hàm tính số bước trượt tối đa
+// Hàm tính số bước trượt tối đa
 function getMaxSteps() {
     const visibleItems = getVisibleItems();
     const totalItems = flashSaleProducts.length;
     return Math.max(0, totalItems - visibleItems - 1 );
 }
 
-// ✅ Cập nhật trạng thái nút điều hướng
+// Cập nhật trạng thái nút điều hướng
 function updateButtons() {
     const maxSteps = getMaxSteps();
     prevButton.style.display = (slideIndex === 0) ? 'none' : 'block';
     nextButton.style.display = (slideIndex >= maxSteps) ? 'none' : 'block';
 }
 
-// ✅ Hàm điều hướng slide
+// Hàm điều hướng slide
 function changeSlide(n) {
     const maxSteps = getMaxSteps();
     slideIndex = Math.max(0, Math.min(slideIndex + n, maxSteps));
@@ -94,19 +78,7 @@ updateButtons();
 
 const brands = [
     'AUKEY', 'SAMSUNG', 'PHILIPS', 'SECCOM', 'ACE', 'WINGS'
-
 ];
-
-const categories = [
-    { name: 'Toys and Hobby', icon: '🎮' },
-    { name: 'Gaming', icon: '🎮' },
-    { name: 'Computer', icon: '💻' },
-    { name: 'Health', icon: '⚕️' },
-    { name: 'Furniture', icon: '🛋️' },
-    { name: 'Clone', icon: '🛋️' },
-];
-
-
 
 // Populate Official Stores
 const storesContainer = document.getElementById('officialStores');
@@ -118,6 +90,16 @@ brands.forEach(brand => {
         </div>
     `;
 });
+
+const categories = [
+    { name: 'Toys and Hobby', icon: '🎮' },
+    { name: 'Gaming', icon: '🎮' },
+    { name: 'Computer', icon: '💻' },
+    { name: 'Health', icon: '⚕️' },
+    { name: 'Furniture', icon: '🛋️' },
+    { name: 'Clone', icon: '🛋️' },
+];
+
 
 // Populate Categories
 const categoriesContainer = document.getElementById('categories');
@@ -169,3 +151,18 @@ recommendedProducts.forEach(product => {
         </div>
     `;
 });
+
+// Color selection
+const colorButtons = document.querySelectorAll('.color-option');
+const colorTitle = document.querySelector('.color-title');
+
+colorButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        colorButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        colorTitle.textContent = `Color: ${button.textContent}`;
+    });
+});
+
+// Quantity input
+
